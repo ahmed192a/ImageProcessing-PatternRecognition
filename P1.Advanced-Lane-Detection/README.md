@@ -13,3 +13,7 @@ The offset of the lane center from the center of the image (converted from pixel
 
 https://user-images.githubusercontent.com/42156372/163694226-9efd9e37-217a-401e-9d7a-886676b58c4f.mp4
 
+
+
+https://user-images.githubusercontent.com/42156372/164046112-231b0135-0a04-405b-84fc-ab2d5329abc6.mp4
+
