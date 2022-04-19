@@ -1,6 +1,7 @@
 # Project 1 : Advanced Lane Detection
 
 <a href="https://colab.research.google.com/github/ahmed192a/ImageProcessing-PatternRecognition/blob/main/P1.Advanced-Lane-Detection/Phase1_Advanced_Lane_Detection.ipynb" target="_parent"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/></a>
+Link For [PDF](https://github.com/ahmed192a/ImageProcessing-PatternRecognition/blob/main/P1.Advanced-Lane-Detection/Phase1_Advanced_Lane_Detection.pdf)
 
 # Phase one: Lane Detection
 **In this first phase**, the goal is to write a software pipeline to identify the lane boundaries in a video from a front-facing camera on a car. it’s required to find and track the lane lines and the
