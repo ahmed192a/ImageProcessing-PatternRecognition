@@ -11,7 +11,12 @@ https://user-images.githubusercontent.com/42156372/163694226-9efd9e37-217a-401e-
 
 
 ## Project 2
-under progress.....
+Pipeline for Video Processing to Detect Cars <br>
+* For more details [Readme](https://github.com/ahmed192a/ImageProcessing-PatternRecognition/blob/main/P2.Vehicle-Detection/README.md)
+* [Link for files](https://github.com/ahmed192a/ImageProcessing-PatternRecognition/blob/main/P2.Vehicle-Detection)
+
+https://user-images.githubusercontent.com/42156372/169870526-9d1e12c3-bccc-42cd-91a5-49e56fafc36a.mp4
+
 
 ### Contributors
 
