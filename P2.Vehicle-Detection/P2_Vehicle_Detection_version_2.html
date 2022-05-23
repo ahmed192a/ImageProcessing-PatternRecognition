@@ -13091,7 +13091,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[74]:</div>
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-python"><pre><span></span><span class="kn">import</span> <span class="nn">os</span>
@@ -13114,7 +13114,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[65]:</div>
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-python"><pre><span></span><span class="kn">import</span> <span class="nn">matplotlib.image</span> <span class="k">as</span> <span class="nn">mpimg</span>
@@ -13147,7 +13147,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[66]:</div>
+<div class="prompt input_prompt">In&nbsp;[3]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-python"><pre><span></span><span class="k">def</span> <span class="nf">convert_color</span><span class="p">(</span><span class="n">img</span><span class="p">,</span> <span class="n">conv</span><span class="o">=</span><span class="s1">&#39;RGB2YCrCb&#39;</span><span class="p">):</span>
@@ -13210,7 +13210,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[67]:</div>
+<div class="prompt input_prompt">In&nbsp;[4]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-python"><pre><span></span><span class="c1">## Heat-map functions</span>
@@ -13262,7 +13262,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[76]:</div>
+<div class="prompt input_prompt">In&nbsp;[5]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-python"><pre><span></span><span class="c1"># Define a single function that can extract features using hog sub-sampling and make predictions</span>
@@ -13318,17 +13318,9 @@ div#notebook {
 
             <span class="c1"># Extract the image patch</span>
             <span class="n">subimg</span> <span class="o">=</span> <span class="n">cv2</span><span class="o">.</span><span class="n">resize</span><span class="p">(</span><span class="n">ctrans_tosearch</span><span class="p">[</span><span class="n">ytop</span><span class="p">:</span><span class="n">ytop</span><span class="o">+</span><span class="n">window</span><span class="p">,</span> <span class="n">xleft</span><span class="p">:</span><span class="n">xleft</span><span class="o">+</span><span class="n">window</span><span class="p">],</span> <span class="p">(</span><span class="mi">64</span><span class="p">,</span><span class="mi">64</span><span class="p">))</span>
-          
-            <span class="c1"># Get color features</span>
-            <span class="c1"># spatial_features = bin_spatial(subimg, size=spatial_size)</span>
-            <span class="c1"># hist_features = color_hist(subimg, nbins=hist_bins)</span>
 
             <span class="c1"># Scale features and make a prediction</span>
             <span class="n">test_features</span> <span class="o">=</span> <span class="n">X_scaler</span><span class="o">.</span><span class="n">transform</span><span class="p">(</span><span class="n">hog_features</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">))</span> 
-            <span class="c1"># X_scaler.fit_transform(hog_features)   </span>
-            <span class="c1"># test_features = X_scaler.transform(hog_features)    </span>
-
-            <span class="c1">#test_features = X_scaler.transform(np.hstack((shape_feat, hist_feat)).reshape(1, -1))  </span>
               
             <span class="n">test_prediction</span>  <span class="o">=</span> <span class="n">svc</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">test_features</span><span class="p">)</span>
             
@@ -13358,7 +13350,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[77]:</div>
+<div class="prompt input_prompt">In&nbsp;[6]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-python"><pre><span></span><span class="c1"># Define a function to extract features from a list of images</span>
@@ -13416,7 +13408,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[8]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-python"><pre><span></span><span class="n">colorspace</span> <span class="o">=</span> <span class="s1">&#39;YCrCb&#39;</span>        <span class="c1"># Can be RGB, HSV, LUV, HLS, YUV, YCrCb       </span>
@@ -13443,15 +13435,9 @@ div#notebook {
   <span class="c1"># Divide up into cars and notcars</span>
   <span class="c1"># Read in car and non-car images</span>
   <span class="n">cars</span> <span class="o">=</span> <span class="n">glob</span><span class="o">.</span><span class="n">glob</span><span class="p">(</span><span class="s1">&#39;training_data/vehicles/**/*.png&#39;</span><span class="p">,</span><span class="n">recursive</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
-<span class="c1">#   shuffle(cars)</span>
   <span class="n">notcars</span> <span class="o">=</span> <span class="n">glob</span><span class="o">.</span><span class="n">glob</span><span class="p">(</span><span class="s1">&#39;training_data/non-vehicles/**/*.png&#39;</span><span class="p">,</span><span class="n">recursive</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
-<span class="c1">#   shuffle(notcars)</span>
-  <span class="c1"># notcars = notcars[:len(cars)]</span>
   <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;There are &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">cars</span><span class="p">))</span> <span class="o">+</span> <span class="s2">&quot; cars images in the training dataset&quot;</span><span class="p">)</span>
   <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;There are &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">notcars</span><span class="p">))</span> <span class="o">+</span> <span class="s2">&quot; not-cars images in the training dataset&quot;</span><span class="p">)</span>
-
-
-
 
   <span class="n">t</span><span class="o">=</span><span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span>
   <span class="n">car_features</span> <span class="o">=</span> <span class="n">extract_features</span><span class="p">(</span>
@@ -13513,13 +13499,40 @@ div#notebook {
 <span class="nb">print</span><span class="p">(</span><span class="s1">&#39; HOG pixel per cell:      &#39;</span><span class="p">,</span> <span class="n">pix_per_cell</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="s1">&#39; HOG cells per block:     &#39;</span><span class="p">,</span> <span class="n">cell_per_block</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="s1">&#39; HOG channel:             &#39;</span><span class="p">,</span> <span class="n">hog_channel</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39; Feature vector length:   &#39;</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">X_train</span><span class="p">[</span><span class="mi">0</span><span class="p">]))</span>
 <span class="nb">print</span><span class="p">()</span>
 <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Train the classifier...&#39;</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">flush</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Done&#39;</span><span class="p">)</span>
 </pre></div>
 
     </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>
+Found Previous Model
+Configuration:
+-----------------------------------------------
+ Color space:              YCrCb
+ HOG orientations:         10
+ HOG pixel per cell:       8
+ HOG cells per block:      2
+ HOG channel:              ALL
+
+Train the classifier...Done
+</pre>
+</div>
+</div>
+
 </div>
 </div>
 
@@ -13533,7 +13546,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[79]:</div>
+<div class="prompt input_prompt">In&nbsp;[9]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-python"><pre><span></span><span class="k">def</span> <span class="nf">prepare_out_blend_frame</span><span class="p">(</span><span class="n">blend_on_road</span><span class="p">,</span> <span class="n">img_binary</span><span class="p">):</span>
@@ -13576,7 +13589,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[80]:</div>
+<div class="prompt input_prompt">In&nbsp;[10]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-python"><pre><span></span><span class="n">ystart</span> <span class="o">=</span> <span class="n">y_start_stop</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>   
@@ -13636,11 +13649,11 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[81]:</div>
+<div class="prompt input_prompt">In&nbsp;[11]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-python"><pre><span></span><span class="n">project_output</span> <span class="o">=</span> <span class="s1">&#39;OUT_project_video_output.mp4&#39;</span>
-<span class="n">clip2</span> <span class="o">=</span> <span class="n">VideoFileClip</span><span class="p">(</span><span class="s2">&quot;project_video.mp4&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">subclip</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">30</span><span class="p">)</span>
+<span class="n">clip2</span> <span class="o">=</span> <span class="n">VideoFileClip</span><span class="p">(</span><span class="s2">&quot;project_video.mp4&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">subclip</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">50</span><span class="p">)</span>
 <span class="n">first_frame</span> <span class="o">=</span> <span class="kc">True</span>
 <span class="n">project_clip</span> <span class="o">=</span> <span class="n">clip2</span><span class="o">.</span><span class="n">fl_image</span><span class="p">(</span><span class="n">process_image</span><span class="p">)</span>
 <span class="o">%</span><span class="n">time</span> <span class="n">project_clip</span><span class="o">.</span><span class="n">write_videofile</span><span class="p">(</span><span class="n">project_output</span><span class="p">,</span> <span class="n">audio</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
@@ -13672,7 +13685,7 @@ div#notebook {
 
 
 <div class="output_subarea output_stream output_stderr output_text">
-<pre>100%|█████████▉| 750/751 [06:21&lt;00:00,  1.97it/s]
+<pre>100%|█████████▉| 750/751 [05:21&lt;00:00,  2.33it/s]
 </pre>
 </div>
 </div>
@@ -13686,8 +13699,8 @@ div#notebook {
 <pre>[MoviePy] Done.
 [MoviePy] &gt;&gt;&gt;&gt; Video ready: OUT_project_video_output.mp4 
 
-CPU times: user 5min 59s, sys: 17.3 s, total: 6min 16s
-Wall time: 6min 24s
+CPU times: user 5min 2s, sys: 10.8 s, total: 5min 13s
+Wall time: 5min 24s
 </pre>
 </div>
 </div>
@@ -13708,7 +13721,7 @@ Wall time: 6min 24s
   <span class="n">video_file</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="n">video_path</span><span class="p">,</span> <span class="s2">&quot;r+b&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
   <span class="n">video_url</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;data:video/mp4;base64,</span><span class="si">{</span><span class="n">b64encode</span><span class="p">(</span><span class="n">video_file</span><span class="p">)</span><span class="o">.</span><span class="n">decode</span><span class="p">()</span><span class="si">}</span><span class="s2">&quot;</span>
   <span class="k">return</span> <span class="n">HTML</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;&quot;&quot;&lt;video width=</span><span class="si">{</span><span class="n">video_width</span><span class="si">}</span><span class="s2"> controls&gt;&lt;source src=&quot;</span><span class="si">{</span><span class="n">video_url</span><span class="si">}</span><span class="s2">&quot;&gt;&lt;/video&gt;&quot;&quot;&quot;</span><span class="p">)</span>
-<span class="n">show_video</span><span class="p">(</span><span class="s2">&quot;/content/ImageProcessing-PatternRecognition/ImageProcessing-PatternRecognition/P2.Vehicle-Detection/ImageProcessing-PatternRecognition/P2.Vehicle-Detection/ImageProcessing-PatternRecognition/P2.Vehicle-Detection/ImageProcessing-PatternRecognition/P2.Vehicle-Detection/ImageProcessing-PatternRecognition/ImageProcessing-PatternRecognition/P2.Vehicle-Detection/ImageProcessing-PatternRecognition/P2.Vehicle-Detection/OUT_project_video_output.mp4&quot;</span><span class="p">)</span>
+<span class="n">show_video</span><span class="p">(</span><span class="s2">&quot;OUT_project_video_output.mp4&quot;</span><span class="p">)</span>
 </pre></div>
 
     </div>

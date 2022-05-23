@@ -177,17 +177,9 @@ def find_cars(img, ystart, ystop, scale, svc, X_scaler, orient, pix_per_cell, ce
 
             # Extract the image patch
             subimg = cv2.resize(ctrans_tosearch[ytop:ytop+window, xleft:xleft+window], (64,64))
-          
-            # Get color features
-            # spatial_features = bin_spatial(subimg, size=spatial_size)
-            # hist_features = color_hist(subimg, nbins=hist_bins)
 
             # Scale features and make a prediction
             test_features = X_scaler.transform(hog_features.reshape(1, -1)) 
-            # X_scaler.fit_transform(hog_features)   
-            # test_features = X_scaler.transform(hog_features)    
-
-            #test_features = X_scaler.transform(np.hstack((shape_feat, hist_feat)).reshape(1, -1))  
               
             test_prediction  = svc.predict(test_features)
             
@@ -276,15 +268,9 @@ else:
   # Divide up into cars and notcars
   # Read in car and non-car images
   cars = glob.glob('training_data/vehicles/**/*.png',recursive=True)
-#   shuffle(cars)
   notcars = glob.glob('training_data/non-vehicles/**/*.png',recursive=True)
-#   shuffle(notcars)
-  # notcars = notcars[:len(cars)]
   print("There are " + str(len(cars)) + " cars images in the training dataset")
   print("There are " + str(len(notcars)) + " not-cars images in the training dataset")
-
-
-
 
   t=time.time()
   car_features = extract_features(
@@ -346,11 +332,23 @@ print(' HOG orientations:        ', orient)
 print(' HOG pixel per cell:      ', pix_per_cell)
 print(' HOG cells per block:     ', cell_per_block)
 print(' HOG channel:             ', hog_channel)
-print(' Feature vector length:   ', len(X_train[0]))
 print()
 print('Train the classifier...', end='', flush=True)
 print('Done')
 ```
+
+    
+    Found Previous Model
+    Configuration:
+    -----------------------------------------------
+     Color space:              YCrCb
+     HOG orientations:         10
+     HOG pixel per cell:       8
+     HOG cells per block:      2
+     HOG channel:              ALL
+    
+    Train the classifier...Done
+
 
 #Image Pipeline
 
@@ -434,7 +432,7 @@ def image_pipeline(img, fname):
 
 ```python
 project_output = 'OUT_project_video_output.mp4'
-clip2 = VideoFileClip("project_video.mp4").subclip(0,30)
+clip2 = VideoFileClip("project_video.mp4").subclip(0,50)
 first_frame = True
 project_clip = clip2.fl_image(process_image)
 %time project_clip.write_videofile(project_output, audio=False)
@@ -444,14 +442,14 @@ project_clip = clip2.fl_image(process_image)
     [MoviePy] Writing video OUT_project_video_output.mp4
 
 
-    100%|█████████▉| 750/751 [06:21<00:00,  1.97it/s]
+    100%|█████████▉| 750/751 [05:21<00:00,  2.33it/s]
 
 
     [MoviePy] Done.
     [MoviePy] >>>> Video ready: OUT_project_video_output.mp4 
     
-    CPU times: user 5min 59s, sys: 17.3 s, total: 6min 16s
-    Wall time: 6min 24s
+    CPU times: user 5min 2s, sys: 10.8 s, total: 5min 13s
+    Wall time: 5min 24s
 
 
 
@@ -463,5 +461,5 @@ def show_video(video_path, video_width = 600):
   video_file = open(video_path, "r+b").read()
   video_url = f"data:video/mp4;base64,{b64encode(video_file).decode()}"
   return HTML(f"""<video width={video_width} controls><source src="{video_url}"></video>""")
-show_video("/content/ImageProcessing-PatternRecognition/ImageProcessing-PatternRecognition/P2.Vehicle-Detection/ImageProcessing-PatternRecognition/P2.Vehicle-Detection/ImageProcessing-PatternRecognition/P2.Vehicle-Detection/ImageProcessing-PatternRecognition/P2.Vehicle-Detection/ImageProcessing-PatternRecognition/ImageProcessing-PatternRecognition/P2.Vehicle-Detection/ImageProcessing-PatternRecognition/P2.Vehicle-Detection/OUT_project_video_output.mp4")
+show_video("OUT_project_video_output.mp4")
 ```
